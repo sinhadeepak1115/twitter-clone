@@ -92,23 +92,36 @@ const Modal: React.FC<ModalProps> = ({
             p-10
             rounded-t
             "
-            ><h3 className="text-3xl font-semibold text-white">{title}</h3></div>
-            <button 
-            onClick={handleClose}
-            className="
+            >
+              <h3 className="text-3xl font-semibold text-white">{title}</h3>
+            </div>
+            <button
+              onClick={handleClose}
+              className="
             p-1
             ml-auto
             border-0
             text-white
             hover:opacity-70
-            transition"><AiOutlineClose size={20}/></button>
+            transition"
+            >
+              <AiOutlineClose size={20} />
+            </button>
           </div>
           {/*body*/}
           <div className="relavite p-10 flex-auto">
             {body}
             {/*Footer*/}
             <div className="flex flex-col gap-2 p-10">
-                <Button/>
+              <Button
+                disabled={disabled}
+                label={actionLabel}
+                secondary
+                fullwidth
+                large
+                onClick={handleSubmit}
+              />
+              {footer}
             </div>
           </div>
         </div>

@@ -22,6 +22,7 @@ const RegisterModal = () => {
     }
     registerModal.onClose();
     loginModal.onOpen();
+
   }, [isLoading, registerModal, loginModal]);
 
   const onSubmit = useCallback(async () => {
@@ -70,6 +71,7 @@ const RegisterModal = () => {
       />
       <Input
         placeholder="Password"
+        type="password"
         onChange={(e) => setPassword(e.target.value)}
         value={password}
         disabled={isLoading}
